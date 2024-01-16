@@ -10,7 +10,7 @@ export const registerController = async(req,res) =>{
         const {name,email,password,phone,address,answer} = req.body;
 
         // Log the received data for debugging
-        alert('Received data:', { name, email, password, answer });
+        console.log('Received data:', { name, email, password, answer });
         //validation (check all values to be provided)
 
         if (!name){
@@ -101,10 +101,17 @@ export const loginController = async(req,res) => {
         const token = await JWT.sign({_id: user._id }, process.env.JWT_SECRET,{
             expiresIn: "7d",
         });
-        res.send({
-            success:true,
-            message:'user login successfully',
-            user,
+        res.status(200).send({
+            success: true,
+            message: "login successfully",
+            user: {
+              _id: user._id,
+              name: user.name,
+              email: user.email,
+              phone: user.phone,
+              adddress: user.address,
+              role: user.role,
+            },
             token,
         });
 

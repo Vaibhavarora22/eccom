@@ -49,7 +49,7 @@ const Register = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="form-control"
-              id="exampleInputEmail"
+              id="exampleInputEmail1"
               placeholder="Enter Your Name"
               required
               autoFocus
@@ -83,7 +83,7 @@ const Register = () => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="form-control"
-              id="exampleInputEmail"
+              id="exampleInputEmail1"
               placeholder="Enter Your Phone"
               required
             />
