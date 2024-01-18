@@ -8,7 +8,7 @@ const Dashboard = () => {
   //console.log({auth.user.address});
   return (
     <Layout title={"Dashboard - Ecommerce App"}>
-      <div className="container-flui m-3 p-3">
+      <div className="container-flui m-3 p-3 dashboard">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
@@ -17,6 +17,7 @@ const Dashboard = () => {
             <div className="card w-75 p-3">
               <h3>Username : {auth?.user?.name}</h3>
               <h3>User E-mail : {auth?.user?.email}</h3>
+              <h3>User Address : {auth?.user?.address}</h3>
               
               
             </div>

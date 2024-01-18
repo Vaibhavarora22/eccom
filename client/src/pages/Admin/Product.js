@@ -3,6 +3,7 @@ import AdminMenu from '../../components/Layout/AdminMenu'
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Layout from '../../components/Layout/Layout';
 
 const Product = () => {
     const [products , setProducts] = useState([]);
@@ -25,8 +26,8 @@ const Product = () => {
         getAllProducts();
     } , []);
   return (
-    <div>
-        <div className='row'>
+    <Layout>
+        <div className='row dashboard'>
             <div className='col-md-3'>
                 <AdminMenu />
             </div>
@@ -49,7 +50,7 @@ const Product = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </Layout>
   )
 }
 

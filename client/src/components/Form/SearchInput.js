@@ -23,10 +23,11 @@ const SearchInput = () => {
     }
   return (
     <>
-        <form class="d-flex form-inline my-2 my-lg-0" onSubmit={handleSubmit}>
-            <input class="form-control mr-sm-4 m-2" type="search" placeholder="Search" aria-label="Search" value={values.keyword}  onChange={(e) => setValues({...values , keyword: e.target.value})} /> 
-            <button class="btn btn-outline-success my-2 my-sm-0 p-2 "  type="submit">Search</button>
+        <form className="d-flex search-form" role="search" onsubmit="{handleSubmit}">
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" defaultValue={values.keyword}  onChange={(e) => setValues({ ...values, keyword: e.target.value })} />
+            <button className="btn btn-outline-success " type="submit">Search</button>
         </form>
+
     </>
   )
 }
